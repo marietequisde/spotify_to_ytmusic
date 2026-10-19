@@ -119,7 +119,11 @@ def search(args):
     if not video_id:
         print("Error: No Match found.")
         return
-    print(f"https://music.youtube.com/watch?v={video_id[0]}")
+
+    result = f"https://music.youtube.com/watch?v={video_id[0]}"
+    print(result)
+    return result
+
 
 
 def cache_clear(args):
