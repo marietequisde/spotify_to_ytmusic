@@ -59,7 +59,7 @@ Install
 
 .. code-block::
 
-    pipx install git+https://github.com/marietequisde/spotify_to_ytmusic.git@v0.2.0
+    pipx install git+https://github.com/marietequisde/spotify_to_ytmusic.git
 
 Use from Python
 ---------------
@@ -68,7 +68,7 @@ Install the package in the environment of your Python project:
 
 .. code-block::
 
-    python -m pip install git+https://github.com/marietequisde/spotify_to_ytmusic.git@v0.2.0
+    python -m pip install git+https://github.com/marietequisde/spotify_to_ytmusic.git
 
 Configure Spotify and YouTube Music once with ``spotify_to_ytmusic setup``.
 The Python API uses the same credentials and cache as the command-line tool.
