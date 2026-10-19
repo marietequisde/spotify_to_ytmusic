@@ -23,8 +23,8 @@ dynamic = ["version", "readme"]
 spotify_to_ytmusic = "spotify_to_ytmusic.main:main"
 
 [project.urls]
-homepage = "https://github.com/sigma67/spotify_to_ytmusic"
-repository = "https://github.com/sigma67/spotify_to_ytmusic"
+homepage = "https://github.com/marietequisde/spotify_to_ytmusic"
+repository = "https://github.com/marietequisde/spotify_to_ytmusic"
 
 [build-system]
 requires = ["setuptools>=65", "setuptools_scm[toml]>=7"]

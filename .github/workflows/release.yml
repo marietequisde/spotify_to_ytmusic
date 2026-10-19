@@ -1,15 +1,14 @@
-name: Upload Python Package
+name: Build GitHub release
 
 on:
   release:
     types: [published]
 
 permissions:
-  id-token: write # trusted publishing
-  contents: read
+  contents: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,5 +23,9 @@ jobs:
           pip install build
       - name: Build package
         run: python -m build
-      - name: Publish a Python distribution to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+      - name: Attach distributions to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$RELEASE_TAG" dist/* --clobber

@@ -1,30 +1,29 @@
 spotify_to_ytmusic
 ####################
 
-.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/spotify_to_ytmusic?style=flat-square
-    :alt: PyPI Downloads
-    :target: https://pypi.org/project/spotify_to_ytmusic/
-
-.. |discuss| image:: https://img.shields.io/github/discussions/sigma67/spotify_to_ytmusic?style=flat-square
+.. |discuss| image:: https://img.shields.io/github/discussions/marietequisde/spotify_to_ytmusic?style=flat-square
    :alt: Ask questions at Discussions
-   :target: https://github.com/sigma67/spotify_to_ytmusic/discussions
+   :target: https://github.com/marietequisde/spotify_to_ytmusic/discussions
 
-.. |code-coverage| image:: https://img.shields.io/codecov/c/github/sigma67/spotify_to_ytmusic?style=flat-square
+.. |code-coverage| image:: https://img.shields.io/codecov/c/github/marietequisde/spotify_to_ytmusic?style=flat-square
     :alt: Code coverage
-    :target: https://codecov.io/gh/sigma67/spotify_to_ytmusic
+    :target: https://codecov.io/gh/marietequisde/spotify_to_ytmusic
 
-.. |latest-release| image:: https://img.shields.io/github/v/release/sigma67/spotify_to_ytmusic?style=flat-square
+.. |latest-release| image:: https://img.shields.io/github/v/release/marietequisde/spotify_to_ytmusic?style=flat-square
     :alt: Latest release
-    :target: https://github.com/sigma67/spotify_to_ytmusic/releases/latest
+    :target: https://github.com/marietequisde/spotify_to_ytmusic/releases/latest
 
-.. |commits-since-latest| image:: https://img.shields.io/github/commits-since/sigma67/spotify_to_ytmusic/latest?style=flat-square
+.. |commits-since-latest| image:: https://img.shields.io/github/commits-since/marietequisde/spotify_to_ytmusic/latest?style=flat-square
     :alt: Commits since latest release
-    :target: https://github.com/sigma67/spotify_to_ytmusic/commits
+    :target: https://github.com/marietequisde/spotify_to_ytmusic/commits
 
 
-|pypi-downloads| |discuss| |code-coverage| |latest-release| |commits-since-latest|
+|discuss| |code-coverage| |latest-release| |commits-since-latest|
 
 A simple command line script to clone a Spotify playlist to YouTube Music.
+
+This is a fork of `sigma67/spotify_to_ytmusic <https://github.com/sigma67/spotify_to_ytmusic>`_.
+Fork-specific releases are published on this repository and are not uploaded to PyPI.
 
 - Transfer a single Spotify playlist
 - Like all the songs in a Spotify playlist
@@ -56,11 +55,11 @@ Install
 
     pipx ensurepath
 
-- Open a new shell. Install:
+- Open a new shell. Install this fork directly from GitHub:
 
 .. code-block::
 
-    pipx install spotify_to_ytmusic
+    pipx install git+https://github.com/marietequisde/spotify_to_ytmusic.git
 
 
 Setup
