@@ -59,7 +59,49 @@ Install
 
 .. code-block::
 
-    pipx install git+https://github.com/marietequisde/spotify_to_ytmusic.git
+    pipx install git+https://github.com/marietequisde/spotify_to_ytmusic.git@v0.2.0
+
+Use from Python
+---------------
+
+Install the package in the environment of your Python project:
+
+.. code-block::
+
+    python -m pip install git+https://github.com/marietequisde/spotify_to_ytmusic.git@v0.2.0
+
+Configure Spotify and YouTube Music once with ``spotify_to_ytmusic setup``.
+The Python API uses the same credentials and cache as the command-line tool.
+Then call the public functions from your code:
+
+.. code-block:: python
+
+    from spotify_to_ytmusic import search_track, transfer_playlist, update_playlist
+
+    playlist_id = transfer_playlist(
+        "https://open.spotify.com/playlist/0S0cuX8pnvmF7gA47Eu63M",
+        name="My playlist",
+        privacy="PRIVATE",
+        use_cache=True,
+    )
+    print(f"Created YouTube Music playlist: {playlist_id}")
+
+    track_url = search_track("https://open.spotify.com/track/0qMZXgcLfkl5RI3q50KHMH")
+    if track_url:
+        print(track_url)
+
+    update_playlist(
+        "https://open.spotify.com/playlist/0S0cuX8pnvmF7gA47Eu63M",
+        "My playlist",
+        append=False,
+    )
+
+``transfer_playlist`` returns the new YouTube Music playlist ID;
+``update_playlist`` returns the updated playlist ID; ``search_track`` returns
+a YouTube Music track URL or ``None`` when there is no match. The API propagates
+errors from Spotify and YouTube Music so callers can handle them in their own
+application. Like the command-line tool, searching tracks writes unmatched
+queries to ``noresults_youtube.txt`` in the current working directory.
 
 
 Setup
