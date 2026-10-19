@@ -53,8 +53,8 @@ class Spotify:
         print("Getting Spotify tracks...")
         results = self.api.playlist(playlistId)
         name = results["name"]
-        total = int(results["tracks"]["total"])
-        tracks = build_results(results["tracks"]["items"])
+        total = int(results["items"]["total"])
+        tracks = build_results(results["items"]["items"])
         count = len(tracks)
         print(f"Spotify tracks: {count}/{total}")
 
@@ -104,8 +104,8 @@ class Spotify:
 def build_results(tracks, album=None):
     results = []
     for track in tracks:
-        if "track" in track:
-            track = track["track"]
+        if "item" in track:
+            track = track["item"]
         if not track or track["duration_ms"] == 0:
             continue
         album_name = album if album else track["album"]["name"]

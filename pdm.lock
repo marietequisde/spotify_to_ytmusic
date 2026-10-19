@@ -4,7 +4,7 @@
 [metadata]
 groups = ["default", "lint", "test"]
 strategy = ["inherit_metadata"]
-lock_version = "4.5.0"
+lock_version = "4.5.1"
 content_hash = "sha256:1cfa39be805c053f35001d4649f1992ec9bc797b2de9662717df608de1d21a24"
 
 [[metadata.targets]]
@@ -625,7 +625,7 @@ files = [
 
 [[package]]
 name = "ytmusicapi"
-version = "1.11.0rc1"
+version = "1.12.3"
 requires_python = ">=3.10"
 summary = "Unofficial API for YouTube Music"
 groups = ["default"]
@@ -633,6 +633,6 @@ dependencies = [
     "requests>=2.22",
 ]
 files = [
-    {file = "ytmusicapi-1.11.0rc1-py3-none-any.whl", hash = "sha256:dfd5fcb6d561cd006526d9b775b96492fb343c992034c2bcd10e55fe59175a2f"},
-    {file = "ytmusicapi-1.11.0rc1.tar.gz", hash = "sha256:f041b2c103323ef086021b1b7f79681fc5ae5bc5c9354dfc91c9018d1ccac85c"},
+    {file = "ytmusicapi-1.12.3-py3-none-any.whl", hash = "sha256:f65db840907a43ca23b29bd563951a1e390fbe2089d7aa4ddbe2043824b2acd9"},
+    {file = "ytmusicapi-1.12.3.tar.gz", hash = "sha256:be81511af7494eec8e5970c56a10e51aada6253246649e4ea6714fd6aeb654ee"},
 ]
