@@ -74,6 +74,12 @@ def get_args(args=None):
         help="Make created playlist public. Default: private",
     )
     spotify_playlist_create.add_argument(
+        "-u",
+        "--unlisted",
+        action="store_true",
+        help="Make created playlist unlisted. Default: private",
+    )
+    spotify_playlist_create.add_argument(
         "-l",
         "--like",
         action="store_true",

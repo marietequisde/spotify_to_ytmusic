@@ -67,9 +67,14 @@ def _create_ytmusic(args, playlist, ytmusic):
     if args.like:
         for id in videoIds:
             ytmusic.rate_song(id, "LIKE")
-
+    if args.public:
+        privacy = "PUBLIC"
+    elif args.unlisted:
+        privacy = "UNLISTED"
+    else:
+        privacy = "PRIVATE"
     playlistId = ytmusic.create_playlist(
-        name, info, "PUBLIC" if args.public else "PRIVATE", videoIds
+        name, info, privacy, videoIds
     )
     _print_success(name, playlistId)
 

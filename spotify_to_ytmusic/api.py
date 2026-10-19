@@ -10,8 +10,8 @@ Privacy = Literal["PRIVATE", "PUBLIC"]
 
 
 def _validate_privacy(privacy: Privacy) -> None:
-    if privacy not in ("PRIVATE", "PUBLIC"):
-        raise ValueError("privacy must be 'PRIVATE' or 'PUBLIC'")
+    if privacy not in ("PRIVATE", "PUBLIC", "UNLISTED"):
+        raise ValueError("privacy must be 'PRIVATE', 'UNLISTED' or 'PUBLIC'")
 
 
 def _create_playlist(
